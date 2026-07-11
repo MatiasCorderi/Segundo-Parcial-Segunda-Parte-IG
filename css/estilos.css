@@ -68,9 +68,6 @@ nav a:active {
     gap: 1.5rem;
 }
 
-.pagina2 main { width: 70%; }
-.pagina2 aside { width: 30%; }
-
 .pagina1 {
     display: flex;
     gap: 2rem;
@@ -296,7 +293,7 @@ address {
 }
 /*--------------------------------*/
 
-/*-----GALERIA Y CAMBIO DE DISEÑO------*/
+/*-----GALERIA------*/
 #galeria {
 display: flex;
 flex-wrap: wrap;
