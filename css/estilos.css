@@ -62,18 +62,45 @@ nav a:active {
 }
 /*-------------------------------*/
 
+/*------TAMAÑO DE PÁGINA Y COLUMNAS------*/
 .pagina1 {
     display: flex;
     gap: 1.5rem;
 }
 
-.pagina2 {
-    display: flex;
-    gap: 1rem;
-}
-
 .pagina2 main { width: 70%; }
 .pagina2 aside { width: 30%; }
+
+.pagina1 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pagina1 .columna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.pagina2 {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.columna-ancha {
+    flex: 2; 
+    min-width: 250px;
+}
+
+.columna-angosta {
+    flex: 1;
+    min-width: 200px;
+}
+
+.columna {
+    flex: 0 0 65%;
+}
 
 
 /*------TEXTOS------*/
@@ -176,64 +203,33 @@ body {
     border-radius: 3rem;
 }
 
-.video {
-    display: block;
-    border: 0.5rem groove rgb(99, 0, 138);
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3rem;
+.galeria-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem 0;
 }
 /*--------------------------------*/
 
 /*-----CONTENEDOR------*/
-
 #contenedor {
-    width: 90%; /* Uso de porcentajes para fluidez [7] */
-    max-width: 1100px; /* Ancho máximo en px según el ejemplo de clase [6] */
-    margin: 0 auto; /* Centrado horizontal */
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo para legibilidad [3] */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
-    display: flex; /* Flexbox para estructura vertical interna */
+    display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 2rem;
 }
-/*---------------------*/
+/*--------------------------------*/
 
-/* Página de Inicio: 3 columnas de igual ancho */
-.pagina1 {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap; /* Fluidez para móviles [7] */
-}
-
-.pagina1 .columna {
-    flex: 1; /* Ocupan el mismo ancho disponible [12] */
-    min-width: 200px;
-}
-
-/* Página 2: 2 columnas de diferente ancho */
-.pagina2 .columna2 {
-    flex: 1; /* Ocupan el mismo ancho disponible [12] */
-    min-width: 200px;
-}
-
-.columna {
-    flex: 0 0 65%; /* Columna ancha para biografía */
-}
-
-.galeria {
-    flex: 0 0 30%; /* Columna angosta para galería */
-}
-
-/* 7. Imágenes y Contenido Multimedia */
-img {
-    width: 100%; /* Imágenes adaptables al contenedor */
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-}
-
-/* 8. Estilos para el Ejercicio y Formulario (Página 3) */
+/*-----FORMULARIO------*/
 form {
     background: #f8f9fa;
     padding: 1.5rem;
@@ -264,26 +260,27 @@ input[type="number"] {
 
 button {
     padding: 0.8rem 1.5rem;
-    background-color: #333;
+    background-color: #003d75;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    transition: background 0.3s;
+    transition: 300ms;
+    justify-content: center;
 }
 
-button:hover { background-color: #d90429; }
+button:hover { background-color: #000000; }
 button:disabled { background-color: #ccc; cursor: not-allowed; }
 
 #area-resultados {
     background: #e9ecef;
     padding: 1.5rem;
-    border-left: 6px solid #d90429;
+    border-left: 6px solid #003d75;
     margin-top: 1.5rem;
 }
+/*--------------------------------*/
 
-/* 9. Pie de Página [14, 15] */
+/*-----PIE DE PÁGINA------*/
 footer {
     margin-top: 4rem;
     padding-top: 1.5rem;
@@ -297,3 +294,45 @@ address {
     font-style: normal;
     margin-bottom: 0.5rem;
 }
+/*--------------------------------*/
+
+/*-----GALERIA Y CAMBIO DE DISEÑO------*/
+#galeria {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+margin-top: 1.5rem;
+transition: all 0.5s ease;
+}
+/*--------------------------------*/
+
+/*------DISEÑO ALTERNATIVO AL INTERACTUAR CON EL BOTÓN------*/
+.diseño-alternativo .tarjeta-obra {
+    flex: 1 1 30%;
+    background-color: #333;
+    color: white;
+    border: 1px solid #000000;
+    width: 100%;
+    transition: 300ms;
+}
+
+.diseño-alternativo .tarjeta-obra img {
+    filter: grayscale(100%);
+    transition: 300ms;
+}
+
+.tarjeta-obra {
+    flex: 1 1 30%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    transition: 300ms;
+}
+
+.tarjeta-obra img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/*--------------------------------*/

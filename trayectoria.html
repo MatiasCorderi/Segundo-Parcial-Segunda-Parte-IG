@@ -15,7 +15,7 @@
             <h1 class="titulo">Rafael Lozano-Hemmer</h1>
         </header>
 
-        <nav>
+        <nav> <!-- Menú de navegación -->
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="trayectoria.html">Trayectoria</a></li>
@@ -24,40 +24,40 @@
         </nav>
 
         <main>
-            <section class="pagina2">
-            <!-- Columna principal -->
-            <article class="columna2">
+            <section class="pagina2"> <!-- Columna izquierda -->
+            <article class=".columna-ancha">
                 <h1 class="titulo">Trayectoria y proyección internacional</h1>
-                <p>Nacido en México y con formación en química física, Lozano-Hemmer desarrolló una
-                    carrera artística orientada al uso crítico de la tecnología. Su enfoque
+                <p>Nacido en <strong>México y con formación en química física,</strong> Lozano-Hemmer desarrolló una
+                    <em>carrera artística</em> orientada al uso crítico de la tecnología. Su enfoque
                     interdisciplinario le permitió integrar conocimientos científicos en la creación de
                     obras complejas y conceptuales.
                     
-                    A lo largo de su trayectoria, ha presentado instalaciones en espacios públicos, museos
-                    y bienales internacionales. Sus proyectos a gran escala han intervenido edificios,
+                    A lo largo de su trayectoria, ha presentado instalaciones en <strong>espacios públicos, museos
+                    y bienales internacionales.</strong> Sus proyectos a gran escala han intervenido edificios,
                     plazas y paisajes urbanos, convirtiendo el espacio público en un escenario de
                     interacción colectiva.
                 
-                    Su trabajo ha sido ampliamente reconocido por su capacidad para involucrar al público
-                    y generar experiencias participativas. Se ha consolidado como una figura clave en el
-                    arte contemporáneo vinculado a la tecnología y la interactividad.</p>
-                <img class="imagenvertical" src="img/lozano-hemmer-2.jpg" alt="Obra de Lozano-Hemmer">
+                    Su trabajo ha sido ampliamente reconocido por su capacidad para involucrar al <em>público</em>
+                    y generar experiencias participativas. Se ha consolidado como una <strong>figura clave</strong> en el
+                    arte contemporáneo vinculado a la <em>tecnología y la interactividad.</em></p>
             </article>
 
-            <article class="columna2">
+            <article class=".columna-angosta"> <!-- Columna derecha -->
                 <h1 class="titulo">Sistemas interactivos y tecnología en tiempo real</h1>
-                <p>El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de sistemas tecnológicos
-                    que reaccionan a la presencia humana. Utiliza dispositivos como cámaras, micrófonos y
-                    sensores biométricos para captar información del entorno y transformarla en respuestas
+                <p>El trabajo de <strong>Rafael Lozano-Hemmer</strong> se basa en el desarrollo de <strong>sistemas tecnológicos</strong>
+                    que reaccionan a la <em>presencia humana.</em> Utiliza dispositivos como <strong>cámaras, micrófonos y
+                    sensores biométricos</strong> para captar información del entorno y transformarla en respuestas
                     visuales o sonoras.
                     
-                    Estas obras funcionan en tiempo real, generando una relación directa entre acción y
-                    resultado. El público no solo observa, sino que influye activamente en el
+                    Estas obras funcionan en <em>tiempo real,</em> generando una relación directa entre acción y
+                    resultado. El público no solo observa, sino que <strong>influye</strong> activamente en el
                     comportamiento de la obra, creando experiencias personalizadas y colectivas al mismo
                     tiempo.</p>
             </article>
             </section>
+            
             <section>
+                <img class="imagenvertical" src="img/lozano-hemmer-2.jpg" alt="Obra de Lozano-Hemmer"><hr class="linea">
                 <h2 class="titulo">Obras y conceptos clave</h2>
                 <ul class="lista">
                     <li><mark>Pulse Room</mark></li>
@@ -66,18 +66,16 @@
                     <li><mark>Body Movies</mark></li>
                     <li><mark>Interactividad</mark></li>
                     <li><mark>Arte en espacio público</mark></li>
-                </ul>
+                </ul><hr class="linea">
             </section>
-
-            <!-- Columna lateral -->
-            <aside class="galeria">
+            
+            <!-- Área de Galería-->
+            <aside class="galeria-contenedor">
                 <h2 class="titulo">Galería de Obras</h2>
-                <p>Haz clic en el botón para alternar el diseño de la galería.</p>
+                <p>Haz clic para alternar el diseño de la galería.</p>
                 <button id="btn-diseño">Cambiar Diseño</button>
-                
-                <!-- Contenedor donde el JS pondrá las obras -->
+
                 <div id="galeria">
-                <!-- Las obras se generarán acá -->
                 </div>
             </aside>
         </main>

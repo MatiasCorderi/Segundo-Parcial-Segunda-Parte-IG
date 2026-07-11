@@ -26,37 +26,40 @@
         <main>
             <article class="columna-bio">
                 <h1 class="titulo">El espectador como protagonista</h1>
-                <p>En la obra de Rafael Lozano-Hemmer, el espectador ocupa un rol central. Las piezas
-                    están diseñadas para activarse únicamente a través de la participación, lo que
+                <p>En la obra de <em>Rafael Lozano-Hemmer,</em> el espectador ocupa un rol central. Las piezas
+                    están diseñadas para activarse únicamente a través de la <strong>participación,</strong> lo que
                     transforma la experiencia artística en un proceso compartido.
                     
-                    Esta participación redefine la relación tradicional entre obra y público. La
-                    interacción no es un complemento, sino el núcleo de la propuesta, generando una
-                    conexión directa entre el cuerpo, la tecnología y el entorno.</p>
+                    Esta participación <strong>redefine la relación tradicional entre obra y público.</strong> La
+                    interacción no es un complemento, sino el <em>núcleo de la propuesta,</em> generando una
+                    conexión directa entre <em>el cuerpo, la tecnología y el entorno.</em></p>
                 <img class="imagenvertical" src="img/lozano-hemmer-3.jpg" alt="Obra de Lozano-Hemmer">
+                <hr class="linea">
             </article>
 
             <article class="columna-bio">
                 <h1 class="titulo">Tecnología y crítica social</h1>
-                <p>El uso de tecnología en su trabajo no es neutral, sino que se vincula con una mirada
+                <p>El uso de tecnología en su trabajo <strong>no es neutral,</strong> sino que se vincula con una mirada
                     crítica sobre temas contemporáneos. Sus obras abordan problemáticas como la
-                    vigilancia masiva, el control de datos y la exposición de la identidad en espacios
-                    públicos.
+                    <em>vigilancia masiva, el control de datos y la exposición de la identidad en espacios
+                    públicos.</em>
                     
-                    A través de estas propuestas, invita a reflexionar sobre cómo las tecnologías afectan
+                    A través de estas propuestas, invita a <em>reflexionar</em> sobre cómo las tecnologías afectan
                     la vida cotidiana. La interacción se convierte en una herramienta para visibilizar
                     estas tensiones y cuestionar su impacto en la sociedad.</p>
+                <hr class="linea">
             </article>
 
             <article class="columna-bio">
                 <h1 class="titulo">Espacio público y experiencia colectiva</h1>
-                <p>Muchas de sus instalaciones se desarrollan en espacios urbanos, lo que permite ampliar
+                <p>Muchas de sus instalaciones se desarrollan en <em>espacios urbanos,</em> lo que permite ampliar
                     el alcance del arte más allá de los ámbitos tradicionales. Estas intervenciones
-                    transforman el paisaje cotidiano en un entorno de experimentación.
+                    <strong>transforman</strong> el paisaje cotidiano en un entorno de <strong>experimentación.</strong>
                     
-                    El carácter colectivo de estas obras genera experiencias compartidas entre
+                    El carácter colectivo de estas obras genera <strong>experiencias compartidas</strong> entre
                     desconocidos, promoviendo nuevas formas de interacción social. El espacio público se
-                    convierte así en un lugar de encuentro donde arte, tecnología y comunidad se entrelazan.</p>
+                    convierte así en un <em>lugar de encuentro donde arte, tecnología y comunidad se entrelazan.</em></p>
+                <hr class="linea">
             </article>
 
             <section class="instrucciones">
@@ -64,46 +67,39 @@
                 <p>Complete el formulario para calcular el consumo eléctrico de las instalaciones. Ingrese primero la cantidad total de obras a procesar.</p>
             </section>
 
-            <section class="sistema">
                 <form id="form-luces">
+                    <label for="cant-obras">Cantidad de obras:</label>
+                    <input type="number" id="cant-obras" required>
+
                     <fieldset>
                         <legend>Datos de la Instalación</legend>
-                        
-                        <label for="cant-obras">Cantidad de obras:</label>
-                        <input type="number" id="cant-obras" name="cant-obras" required>
-                        
-                        <div id="campos-obras">
-                            <!-- Los inputs de cada obra se habilitarán según el proceso -->
-                            <label for="nombre-obra">Nombre de la obra:</label>
-                            <input type="text" id="nombre" name="nombre">
-                            
-                            <label for="luces">Cantidad de luces móviles:</label>
-                            <input type="number" id="luces" name="luces">
-                            
-                            <label for="tiempo">Horas de funcionamiento/día:</label>
-                            <input type="number" id="tiempo" name="tiempo">
+                        <label for="nombre">Nombre de la obra:</label>
+                        <input type="text" id="nombre">
+        
+                        <label for="luces">Luces móviles:</label>
+                        <input type="number" id="luces">
 
-                            <label for="consumo">Consumo por luz (kWh):</label>
-                            <input type="number" id="consumo" name="consumo">
+                        <label for="tiempo">Horas de funcionamiento/día:</label>
+                        <input type="number" id="tiempo">
 
-                            <label for="costo">Costo por kWh ($):</label>
-                            <input type="number" id="costo" name="costo">
-                        </div>
+                        <label for="consumo">Consumo por luz (kWh):</label>
+                        <input type="number" id="consumo">
 
-                        <div class="botones">
-                            <button type="button" id="btn-agregar">Cargar Obra</button>
-                            <button type="button" id="btn-calcular" disabled>Calcular Resultados</button>
-                            <button type="reset" id="btn-reiniciar" disabled>Reiniciar</button>
-                        </div>
+                        <label for="costo">Costo por kWh ($):</label>
+                        <input type="number" id="costo">
                     </fieldset>
+
+                    <div class="botones">
+                        <button type="button" id="btn-agregar">Cargar Obra</button>
+                        <button type="button" id="btn-calcular" disabled>Calcular</button>
+                        <button type="button" id="btn-reiniciar" disabled>Reiniciar</button>
+                    </div>
                 </form>
 
-                <div id="area-resultados">
-                    <!-- Los cálculos van a aparecer acá -->
-                </div>
-            </section>
+                <div id="area-resultados"></div>
 
             <section id="seccion-curiosidad">
+                <hr class="linea">
                 <h3 class="titulo">¿Sabías que...?</h3>
                 <p id="texto-curioso">Haz clic para descubrir un dato curioso sobre el artista.</p>
                 <button id="btn-curiosidad">Ver dato curioso al azar</button>
