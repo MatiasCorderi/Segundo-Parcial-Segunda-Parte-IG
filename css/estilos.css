@@ -1,0 +1,299 @@
+/*------BARRA DE NAVEGACIÓN------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    border: 0.2rem inset rgb(255, 222, 222);
+    background-color: #920c1e;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 #0a0101;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+nav li {
+    padding: 1rem;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    border: 0.2rem solid rgb(41, 0, 0);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+nav a:link {
+    transition: 200ms;
+    border: 0.2rem solid rgb(41, 0, 0);
+	background-color:  #a00000;
+	color: #ffffff;
+}
+
+nav a:visited {
+    transition: 200ms;
+    border: 0.2rem solid rgb(41, 0, 0);
+	background-color: #ff7272;
+	color: #000;
+}
+
+nav a:hover {
+    transition: 200ms;
+    border: 0.2rem solid rgb(0, 0, 0);
+	background-color: #ffffff;
+	color: #a00000;
+}
+
+nav a:active {
+    transition: 100ms;
+    border: 0.2rem solid rgb(255, 255, 255);
+	background-color: #000000;
+	color: #ffffff;
+}
+/*-------------------------------*/
+
+.pagina1 {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.pagina2 {
+    display: flex;
+    gap: 1rem;
+}
+
+.pagina2 main { width: 70%; }
+.pagina2 aside { width: 30%; }
+
+
+/*------TEXTOS------*/
+.titulo {
+    font-family: "Barlow", sans-serif;
+    font-style: normal;
+}
+
+.titulo, p#cita {
+    text-align: center;
+    margin: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #a80000;
+  text-decoration: underline;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  color: #214fe6;
+  text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    margin: 1rem;
+}
+
+strong {
+    color: #cf3b00;
+}
+
+em, .lista {
+    text-decoration: underline;
+}
+
+.pie {
+    font-size: 1.3rem;
+    text-align: center;
+}
+/*------------------*/
+
+/*------ETIQUETAS SEMÁNTICAS------*/
+main {
+    padding: 2% 5%;
+    border: 0.5rem double rgb(97, 97, 97);
+    background-color: white;
+    margin: 2% 10%;
+    border-radius: 1rem;
+}
+
+footer {
+    padding: 1%;
+    border: 0.5rem groove rgb(177, 63, 91);
+    background-color: white;
+    margin: 2% 10%;
+    border-radius: 3rem;
+}
+
+.linea {
+    color: #00365a;
+    margin: 2rem;
+}
+/*--------------------------------*/
+
+
+/*------MATERIAL MULTIMEDIAL------*/
+body {
+    background-image: url("../img/fondo.png");
+    background-position: center;
+    background-color: #000;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 2rem 0;
+}
+
+.imagenhorizontal {
+    display: block;
+    border: 0.5rem groove rgb(99, 0, 138);
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 3rem;
+}
+
+.imagenvertical {
+    display: block;
+    border: 0.5rem groove rgb(99, 0, 138);
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    border-radius: 3rem;
+}
+
+.video {
+    display: block;
+    border: 0.5rem groove rgb(99, 0, 138);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3rem;
+}
+/*--------------------------------*/
+
+/*-----CONTENEDOR------*/
+
+#contenedor {
+    width: 90%; /* Uso de porcentajes para fluidez [7] */
+    max-width: 1100px; /* Ancho máximo en px según el ejemplo de clase [6] */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo para legibilidad [3] */
+    padding: 2.5rem;
+    display: flex; /* Flexbox para estructura vertical interna */
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+/*---------------------*/
+
+/* Página de Inicio: 3 columnas de igual ancho */
+.pagina1 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* Fluidez para móviles [7] */
+}
+
+.pagina1 .columna {
+    flex: 1; /* Ocupan el mismo ancho disponible [12] */
+    min-width: 200px;
+}
+
+/* Página 2: 2 columnas de diferente ancho */
+.pagina2 .columna2 {
+    flex: 1; /* Ocupan el mismo ancho disponible [12] */
+    min-width: 200px;
+}
+
+.columna {
+    flex: 0 0 65%; /* Columna ancha para biografía */
+}
+
+.galeria {
+    flex: 0 0 30%; /* Columna angosta para galería */
+}
+
+/* 7. Imágenes y Contenido Multimedia */
+img {
+    width: 100%; /* Imágenes adaptables al contenedor */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* 8. Estilos para el Ejercicio y Formulario (Página 3) */
+form {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #d90429; }
+button:disabled { background-color: #ccc; cursor: not-allowed; }
+
+#area-resultados {
+    background: #e9ecef;
+    padding: 1.5rem;
+    border-left: 6px solid #d90429;
+    margin-top: 1.5rem;
+}
+
+/* 9. Pie de Página [14, 15] */
+footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+address {
+    font-style: normal;
+    margin-bottom: 0.5rem;
+}
