@@ -20,7 +20,6 @@ btnCargar.addEventListener('click', function() {
         }
         inputTotal.disabled = true;
     }
-    console.log("Se ha cargado una obra");
 
     const nombre = document.querySelector('#nombre').value;
     const luces = Number(document.querySelector('#luces').value);
@@ -28,10 +27,12 @@ btnCargar.addEventListener('click', function() {
     const consumo = Number(document.querySelector('#consumo').value);
     const costo = Number(document.querySelector('#costo').value);
 
-    if (nombre === "" || isNaN(luces) || isNaN(tiempo) || isNaN(consumo) || isNaN(costo)) {
+    if (nombre === "" || isNaN(luces) || luces < 0 || isNaN(tiempo) || tiempo < 0 || isNaN(consumo) ||
+    consumo < 0 || isNaN(costo) || costo < 0) {
         alert("Complete todos los campos correctamente.");
         return;
     }
+    console.log("Se ha cargado una obra");
 
     listaObras.push({ nombre, luces, tiempo, consumo, costo });
     alert("Obra cargada. Quedan: " + (totalObrasCargar - listaObras.length));
@@ -72,7 +73,7 @@ btnCalcular.addEventListener('click', function() {
     let promedio = acumuladorConsumo / listaObras.length;
     let porcentaje = (contadorMas20 / listaObras.length) * 100;
     
-    // Se calcula el costo usando el objeto enbcontrado como máximo
+    // Se calcula el costo usando el objeto encontrado como máximo
     let costoMax = (obraMax.luces * obraMax.tiempo * obraMax.consumo) * obraMax.costo;
 
     areaResultados.innerHTML = `
@@ -89,7 +90,6 @@ btnCalcular.addEventListener('click', function() {
 });
 
 btnReiniciar.addEventListener('click', function() {
-    // Se resetean las variables globales de control 
     listaObras = []; 
     totalObrasCargar = 0;
 
