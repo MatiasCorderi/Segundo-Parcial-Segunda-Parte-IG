@@ -66,11 +66,6 @@ nav a:active {
 .pagina1 {
     display: flex;
     gap: 1.5rem;
-}
-
-.pagina1 {
-    display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
 }
 
