@@ -14,7 +14,6 @@
         <header>
             <h1 class="titulo">Rafael Lozano-Hemmer</h1>
         </header>
-
         <nav> <!-- Barra de navegación -->
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -22,7 +21,6 @@
                 <li><a href="experimentacion.html">Experimentación</a></li>
             </ul>
         </nav>
-
         <main>
             <article class="columna2"> <!-- Títulos y párrafos -->
                 <h1 class="titulo">El espectador como protagonista</h1>
@@ -36,7 +34,6 @@
                 <img class="imagenvertical" src="img/lozano-hemmer-3.jpg" alt="Obra de Lozano-Hemmer">
                 <hr class="linea">
             </article>
-
             <article class="columna2">
                 <h1 class="titulo">Tecnología y crítica social</h1>
                 <p>El uso de tecnología en su trabajo <strong>no es neutral,</strong> sino que se vincula con una mirada
@@ -49,7 +46,6 @@
                     estas tensiones y cuestionar su impacto en la sociedad.</p>
                 <hr class="linea">
             </article>
-
             <article class="columna2">
                 <h1 class="titulo">Espacio público y experiencia colectiva</h1>
                 <p>Muchas de sus instalaciones se desarrollan en <em>espacios urbanos,</em> lo que permite ampliar
@@ -61,44 +57,38 @@
                     convierte así en un <em>lugar de encuentro donde arte, tecnología y comunidad se entrelazan.</em></p>
                 <hr class="linea">
             </article>
-
             <section class="instrucciones">
                 <h2 class="titulo">Control de Luces Móviles</h2>
                 <p>Complete el formulario para calcular el consumo eléctrico de las instalaciones. Ingrese primero la cantidad total de obras a procesar.</p>
             </section>
-
-                <form id="form-luces"> <!-- Ejercicio de formulario -->
-                    <label for="cant-obras">Cantidad de obras:</label>
-                    <input type="number" id="cant-obras" required>
-
-                    <fieldset>
-                        <legend>Datos de la Instalación</legend>
-                        <label for="nombre">Nombre de la obra:</label>
-                        <input type="text" id="nombre">
+            <form id="form-luces"> <!-- Ejercicio de formulario -->
+            <label for="cant-obras">Cantidad de obras:</label>
+            <input type="number" id="cant-obras" required>
+                <fieldset>
+                    <legend>Datos de la Instalación</legend>
+                    <label for="nombre">Nombre de la obra:</label>
+                    <input type="text" id="nombre">
         
-                        <label for="luces">Luces móviles:</label>
-                        <input type="number" id="luces">
+                    <label for="luces">Luces móviles:</label>
+                    <input type="number" id="luces">
 
-                        <label for="tiempo">Horas de funcionamiento/día:</label>
-                        <input type="number" id="tiempo">
+                    <label for="tiempo">Horas de funcionamiento/día:</label>
+                    <input type="number" id="tiempo">
 
-                        <label for="consumo">Consumo por luz (kWh):</label>
-                        <input type="number" id="consumo">
+                    <label for="consumo">Consumo por luz (kWh):</label>
+                    <input type="number" id="consumo">
 
-                        <label for="costo">Costo por kWh ($):</label>
-                        <input type="number" id="costo">
-                    </fieldset>
-
-                    <div class="botones">
-                        <button type="button" id="btn-agregar">Cargar Obra</button>
-                        <button type="button" id="btn-calcular" disabled>Calcular</button>
-                        <button type="button" id="btn-reiniciar" disabled>Reiniciar</button>
-                    </div>
-                </form>
-
-                <div id="area-resultados"> <!-- Resultados del formulario -->
-                </div> 
-
+                    <label for="costo">Costo por kWh ($):</label>
+                    <input type="number" id="costo">
+                </fieldset>
+                <div class="botones">
+                    <button type="button" id="btn-agregar">Cargar Obra</button>
+                    <button type="button" id="btn-calcular" disabled>Calcular</button>
+                    <button type="button" id="btn-reiniciar" disabled>Reiniciar</button>
+                </div>
+            </form>
+            <div id="area-resultados"> <!-- Resultados del formulario -->
+            </div> 
             <section id="seccion-curiosidad"> <!-- Datos aleatorios -->
                 <hr class="linea">
                 <h3 class="titulo">¿Sabías que...?</h3>
@@ -106,7 +96,6 @@
                 <button id="btn-curiosidad">Ver dato curioso al azar</button>
             </section>
         </main>
-
         <footer class="pie"> <!-- Pie de página -->
             <address>Contacto: <a href="mailto:casey@artedigital.com">casey@artedigital.com</a></address>
         </footer>
