@@ -39,6 +39,7 @@ btnDiseño.addEventListener('click', function() {
             tarjetas[i].style.color = "white";
         }
     }
+    console.log("Se ha modificado el diseño de la página");
 });
 
 // Ejecución inicial para que la galería aparezca al cargar la página

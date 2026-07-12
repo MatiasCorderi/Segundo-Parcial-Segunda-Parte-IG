@@ -20,6 +20,7 @@ btnCargar.addEventListener('click', function() {
         }
         inputTotal.disabled = true;
     }
+    console.log("Se ha cargado una obra");
 
     const nombre = document.querySelector('#nombre').value;
     const luces = Number(document.querySelector('#luces').value);
@@ -84,10 +85,29 @@ btnCalcular.addEventListener('click', function() {
 
     btnCalcular.disabled = true;
     btnReiniciar.disabled = false;
+    console.log("Se han calculado las obras");
 });
 
 btnReiniciar.addEventListener('click', function() {
-    location.reload(); 
+    // Se resetean las variables globales de control 
+    listaObras = []; 
+    totalObrasCargar = 0;
+
+    // Se limpia el área de resultados
+    areaResultados.innerHTML = ""; 
+
+    inputTotal.value = ""; 
+    inputTotal.disabled = false;
+
+    // Se limpian los campos del formulario
+    formulario.reset(); 
+
+    // Se restablece el estado de los botones
+    btnCargar.disabled = false;
+    btnCalcular.disabled = true;
+    btnReiniciar.disabled = true;
+
+    console.log("Sistema reiniciado correctamente");
 });
 
 // Se declara la variable datosCuriosos y los distintos datos aleatorios
@@ -110,4 +130,6 @@ const textoCurioso = document.querySelector('#texto-curioso');
 btnAzar.addEventListener('click', function() {
     const indice = Math.floor(Math.random() * datosCuriosos.length);
     textoCurioso.innerText = datosCuriosos[indice];
+    
+    console.log("Se ha lanzado un dato al azar");
 });
